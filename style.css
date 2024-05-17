@@ -38,33 +38,21 @@ body, html {
     margin-right: -150px; /* Adjust margin to move button outside image */
 }
 
-.logo {
-    width: 2vw;
+.navigation-list-item {
+    display: inline-block;
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px;
+    border-top: 10px solid white;
+    margin-right: -5px;
+    
+    }
+    
+    .logo {
+    max-height: 5%;
+    max-width: 15px;
     background: cornflowerblue;
     border: 5px solid cornflowerblue;
-  }
-  
-  .outer {
-    display: flex;
-  }
-  
-  .outer>p {
-    flex: 1;
-    height: 70px;
-    line-height: 70px;
-    background: blue;
-  }
-  
-  .outer>p>a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .outer>p .logo {
-    flex: 1;
-  }
-  
-  p {
-    text-align: center;
-    margin: 0px;
-  }
+    
+    }
