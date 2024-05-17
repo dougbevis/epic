@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attack White</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+    function big() {
+        var w = 5;
+        var foo = setInterval(function() {
+          if (w > 15) clearInterval(foo)
+          w = w + 1;
+          document.getElementById('logo').style.width = w + 'vw';
+      
+        }, 100);
+      }
+      </script>
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page1.html">Page 1</a></li>
-                <li><a href="page2.html">Page 2</a></li>
-            </ul>
-            <img src="images/epic_attack.png" alt="Epic Attack Logo" class="nav-logo">
+        <nav class="navigation">
+            <div class="outer">
+              <p class="navigation-list-item"><a href="#home">Home</a></p>
+              <p class="navigation-list-item"><a href="#features">Features</a></p>
+              <p class="navigation-list-item"><a href="#add-info">Add info</a></p>
+          
+              <p class="navigation-list-item"><img class="logo" id="logo" src="images/epic_attack.png" onclick="big()"></p>
+              <p class="navigation-list-item"><a href="#form">Form</a></p>
+              <p class="navigation-list-item"><a href="#team">Team</a></p>
+              <p class="navigation-list-item"><a href="#contact">Contact</a></p>
+            </div>
         </nav>
     </header>
     <div class="content">
