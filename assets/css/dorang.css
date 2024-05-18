@@ -11632,7 +11632,7 @@ body {
   position: relative;
   text-align: center;
   color: #fff;
-  background-image: url(../imgs/footer.jpg);
+  background-image: url(../imgs/soccer-footer.jpeg);
   background-size: cover;
   background-position: bottom;
 }
@@ -11691,7 +11691,7 @@ body.light-theme .theme-selector .spinner i {
 }
 
 body.light-theme .header {
-  background-image: url(../imgs/header-light.jpg);
+  background-image: url(../imgs/soccer.jpeg);
 }
 
 body.light-theme .header .overlay {
