@@ -4572,46 +4572,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 1rem;
 }
 
- /* navbar css for mobile start */
- .nav-toggler {
-  display: block;
-  position: absolute;
-  right: 15px;
-  z-index: 99999;
-}
-.site-navbar {
-  min-height: 39px;
-}
-.site-navbar ul {
-  position: absolute;
-  width: 100%;
-  left: -15px;
-  top: 60px;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ed242e;
-  max-height: 0;
-  overflow: hidden;
-  transition: .3s;
-  z-index: 99999;
-  box-shadow: 0 0 10px rgb(192, 190, 182);
-}
-.site-navbar ul li {
-  width: 100%;
-  text-align: left;
-  padding-right: 0;
-}
-.site-navbar ul li a {
-  padding: 25px 25px 0px 25px;
-}
-.site-navbar ul.open {
-  max-height: 100vh;
-  padding-bottom: 25px;
-  overflow: visible;
-}
-/* navbar css for mobile end */
-
-/* .navbar > .container,
+.navbar > .container,
 .navbar > .container-fluid {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5078,7 +5039,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
-} */
+}
 
 .card {
   position: relative;
