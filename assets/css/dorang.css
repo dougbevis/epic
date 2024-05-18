@@ -4611,7 +4611,7 @@ input[type="button"].btn-block {
 }
 /* navbar css for mobile end */
 
-.navbar > .container,
+/* .navbar > .container,
 .navbar > .container-fluid {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5078,7 +5078,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: #fff;
-}
+} */
 
 .card {
   position: relative;
