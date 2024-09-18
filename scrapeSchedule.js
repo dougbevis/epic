@@ -4,20 +4,27 @@
 
    async function scrapeSchedule() {
      try {
-       const { data } = await axios.get('https://www.ursl-soccer.com/_element_display/#%2F74947%2Fteams%2F113592592%2F111362213-113592664%2FTEAM.html%3Frnd%3D1726626445783');
-       const $ = cheerio.load(data);
+       console.log('Fetching schedule data...');
+       const { data: mainPageHtml } = await axios.get('https://example.com'); // Replace with the actual URL
+       const $mainPage = cheerio.load(mainPageHtml);
+       const iframeUrl = $mainPage('#iframe-dii-element').attr('src');
 
-       // Log the HTML to inspect the structure
-       console.log(data);
+       if (!iframeUrl) {
+         console.error('Iframe URL not found');
+         return [];
+       }
+
+       console.log('Fetching iframe content...');
+       const { data: iframeHtml } = await axios.get(iframeUrl);
+       const $iframe = cheerio.load(iframeHtml);
 
        const schedule = [];
-       $('.sched-holder tr').each((index, element) => {
-         const date = $(element).find('.date').text().trim();
-         const opponent = $(element).find('.opponent').text().trim();
-         const location = $(element).find('.location').text().trim();
-         const time = $(element).find('.time').text().trim();
+       $iframe('.match-row').each((index, element) => {
+         const date = $iframe(element).find('.match-date').text().trim();
+         const opponent = $iframe(element).find('.match-opponent').text().trim();
+         const location = $iframe(element).find('.match-location').text().trim();
+         const time = $iframe(element).find('.match-time').text().trim();
 
-         // Log each extracted item to debug
          console.log({ date, opponent, location, time });
 
          if (date && opponent && location && time) {
@@ -25,6 +32,7 @@
          }
        });
 
+       console.log('Schedule fetched:', schedule);
        return schedule;
      } catch (error) {
        console.error('Error scraping schedule:', error);
