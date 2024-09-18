@@ -38,7 +38,20 @@
   <div class="container page-container" id="schedule">
     <div class="col-md-10 col-lg-8 m-auto">
       <h6 class="title mb-4">Our Schedule</h6>
-      <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      <% if (schedule.length > 0) { %>
+        <ul>
+          <% schedule.forEach(game => { %>
+            <li>
+              <strong>Date:</strong> <%= game.date %> <br>
+              <strong>Opponent:</strong> <%= game.opponent %> <br>
+              <strong>Location:</strong> <%= game.location %> <br>
+              <strong>Time:</strong> <%= game.time %>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <p>No schedule available at the moment.</p>
+      <% } %>
     </div>
   </div>
 
