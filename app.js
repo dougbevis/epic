@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public/views'));
 
 // Serve static files from the "assets" directory
-app.use(express.static(path.join(__dirname, 'public/assets')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Use the index router for the root path
 app.use('/', indexRouter);
