@@ -11,7 +11,7 @@
        console.log(data);
 
        const schedule = [];
-       $('.schedule-table tr').each((index, element) => {
+       $('.sched-holder tr').each((index, element) => {
          const date = $(element).find('.date').text().trim();
          const opponent = $(element).find('.opponent').text().trim();
          const location = $(element).find('.location').text().trim();
