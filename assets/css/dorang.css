@@ -51,7 +51,7 @@
 
 html {
   font-family: sans-serif;
-  line-height: 1.15;
+  line-height: 0;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -65,7 +65,6 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
   color: #212529;
   text-align: left;
   background-color: #fff;
@@ -559,6 +558,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  line-height: 1.5;
 }
 
 @media (min-width: 576px) {
@@ -591,6 +591,31 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.match {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.further-out-matches {
+  background-color: #e0f7fa;
+}
+
+.previous-matches {
+  background-color: #f1f8e9;
+}
+
+.match-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.match-details, .match-date {
+  margin: 5px 0;
 }
 
 .row {
@@ -4569,7 +4594,6 @@ input[type="button"].btn-block {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5rem 1rem;
 }
 
 .navbar > .container,
@@ -11272,7 +11296,7 @@ a:hover {
   display: inline-block;
   margin-right: 3px;
   position: relative;
-  top: 1px;
+  top: 0px;
   font-size: 14px;
 }
 
@@ -11494,6 +11518,8 @@ a:hover {
 }
 
 .header {
+  padding-top: 0;
+  margin-top: 0;
   z-index: 990;
   position: relative;
   height: 100%;
@@ -11528,9 +11554,32 @@ a:hover {
       transform: translate(-50%, -50%);
 }
 
+/* Ensure the logo remains the same size */
+.page-navbar .nav-navbar .nav-link img {
+  width: 80px; /* Set a fixed width */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%); /* Adjust for the center */
+  z-index: 1000; /* Ensure it stays on top */
+  padding-top: 10px;
+}
+
+/* Adjust the navbar height to accommodate the logo */
+.page-navbar {
+  height: 110px; /* Adjust height as needed */
+}
+
+/* When the navbar is affixed, ensure the logo still hangs over
+.page-navbar.affix {
+  height: 70px; /* Adjust height as needed *
+  padding-bottom: 40px; /* Add padding to allow the logo to hang over *
+} */
+
 .header .header-content .header-title {
   font-size: calc(25px + (50 - 25) * ((100vw - 300px) / (1300 - 300)));
-  margin-top: 15px;
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -11610,11 +11659,13 @@ a:hover {
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* page container and row */
 .page-container {
-  text-align: center;
+  text-align: left;
   padding: 50px 0;
 }
 
@@ -11781,3 +11832,4 @@ body.light-theme .contact-section .footer .links a {
 body.dark-theme {
   background: #212529;
 }
+
