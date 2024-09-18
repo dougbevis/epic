@@ -5,7 +5,7 @@
    async function scrapeSchedule() {
      try {
        console.log('Fetching schedule data...');
-       const { data: mainPageHtml } = await axios.get('https://example.com'); // Replace with the actual URL
+       const { data: mainPageHtml } = await axios.get('https://elements.demosphere-secure.com/74947/teams/113592592/111362213-113592664/TEAM.html?rand6=446041'); // Replace with the actual URL
        const $mainPage = cheerio.load(mainPageHtml);
        const iframeUrl = $mainPage('#iframe-dii-element').attr('src');
 
