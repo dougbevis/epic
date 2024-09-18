@@ -3,7 +3,7 @@ const router = express.Router();
 const scrapeSchedule = require('./scrapeSchedule');
 
 // Define the route for the home page
-app.get('/', async (req, res) => {
+router.get('/', async (req, res) => {
     const schedule = await scrapeSchedule();
     res.render('index', { scrapeSchedule });
   });
