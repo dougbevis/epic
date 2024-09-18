@@ -27,6 +27,4 @@
      }
    }
 
-   scrapeSchedule().then(schedule => {
-     console.log(schedule);
-   });
+module.exports = scrapeSchedule;
