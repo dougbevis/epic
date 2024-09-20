@@ -18,16 +18,17 @@
        const $iframe = cheerio.load(iframeHtml);
 
        const schedule = [];
-       $iframe('.match-row').each((index, element) => {
-         const date = $iframe(element).find('.match-date').text().trim();
-         const opponent = $iframe(element).find('.match-opponent').text().trim();
-         const location = $iframe(element).find('.match-location').text().trim();
-         const time = $iframe(element).find('.match-time').text().trim();
+       $iframe('.GameRow').each((index, element) => {
+         const date = $iframe(element).find('.date').text().trim();
+         const time = $iframe(element).find('.time').text().trim();
+         const home = $iframe(element).find('.tm1').text().trim();
+         const away = $iframe(element).find('.tm2').text().trim();
+         const result = $iframe(element).find('.mr').text().trim();
 
-         console.log({ date, opponent, location, time });
+         console.log({ date, home, away, time, result });
 
-         if (date && opponent && location && time) {
-           schedule.push({ date, opponent, location, time });
+         if (date && home && away && time) {
+           schedule.push({ date, time, home, away, result });
          }
        });
 
@@ -40,3 +41,5 @@
    }
 
 module.exports = scrapeSchedule;
+
+scrapeSchedule();

@@ -43,9 +43,10 @@
           <% schedule.forEach(game => { %>
             <li>
               <strong>Date:</strong> <%= game.date %> <br>
-              <strong>Opponent:</strong> <%= game.opponent %> <br>
-              <strong>Location:</strong> <%= game.location %> <br>
-              <strong>Time:</strong> <%= game.time %>
+              <strong>Time:</strong> <%= game.time %> <br>
+              <strong>Home Team:</strong> <%= game.home %> <br>
+              <strong>Away Team:</strong> <%= game.away %> <br>
+              <strong>Result:</strong> <%= game.result %>
             </li>
           <% }) %>
         </ul>
