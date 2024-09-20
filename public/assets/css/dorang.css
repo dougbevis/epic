@@ -11853,3 +11853,43 @@ body.dark-theme {
   border-color: #ff0000;
   background-color: #ffe6e6;
 }
+
+.game-box {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.game-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+}
+
+.game-date .day {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.game-date .month {
+  font-size: 14px;
+}
+
+.game-result {
+  margin-top: 40px;
+}
+
+.game-result .result {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.game-result .win {
+  color: green;
+}
+
+.game-result .loss {
+  color: red;
+}

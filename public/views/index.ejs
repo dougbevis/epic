@@ -42,11 +42,14 @@
         <div class="scrollable-container">
           <% schedule.forEach((game, index) => { %>
             <div class="game-box" data-index="<%= index %>">
-              <strong>Date:</strong> <%= game.date %> <br>
-              <strong>Time:</strong> <%= game.time %> <br>
-              <strong>Home Team:</strong> <%= game.home %> <br>
-              <strong>Away Team:</strong> <%= game.away %> <br>
-              <strong>Result:</strong> <%= game.result %>
+              <div class="game-date">
+                <span class="day">15</span>
+                <span class="month">Oct</span>
+            </div>
+            <div class="game-result">
+                <span class="home-team">EPIC SC Attack White 2014B</span>
+                <span class="result">2:1</span>
+                <span class="away-team">Opponent Team</span>
             </div>
           <% }) %>
         </div>
