@@ -11851,6 +11851,9 @@ body.dark-theme {
   min-width: 200px;
   position: relative;
   margin-bottom: 10px;
+  min-height: 150px; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow content */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .highlight {
