@@ -11854,13 +11854,6 @@ body.dark-theme {
   background-color: #ffe6e6;
 }
 
-.game-box {
-  position: relative;
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-
 .game-date {
   position: absolute;
   top: 10px;
