@@ -11881,8 +11881,8 @@ body.dark-theme {
   text-align: left;
 }
 
-.game-result .home-team,
-.game-result .away-team {
+.home-team,
+.away-team {
   display: block; /* Ensure both teams are displayed as block elements */
   font-size: 14px;
 }
