@@ -11864,17 +11864,21 @@ body.dark-theme {
   top: 10px;
   right: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .game-date .day {
   font-size: 34px;
   font-weight: bold;
   display: block;
+  align-self: flex-start;
 }
 
 .game-date .month {
   font-size: 14px;
   display: block;
+  align-self: flex-start;
 }
 
 .game-result {
