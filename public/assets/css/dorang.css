@@ -11838,8 +11838,6 @@ body.dark-theme {
   overflow-x: auto;
   padding: 10px;
   gap: 10px;
-  flex-direction: column;
-  height: 100%;
 }
 
 .game-box {
@@ -11851,7 +11849,7 @@ body.dark-theme {
   min-width: 200px;
   position: relative;
   margin-bottom: 10px;
-  min-height: 150px; /* Set a fixed height */
+  min-height: 100px; /* Set a fixed height */
   overflow: hidden; /* Hide overflow content */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
