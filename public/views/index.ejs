@@ -49,9 +49,11 @@
               <div class="game-result">
                 <span class="home-team"><%= game.home %></span>
                 <span class="away-team"><%= game.away %></span>
-                <span class="result <%= game.win === 'win' ? 'text-success' : game.win === 'loss' ? 'text-danger' : '' %>">
-                  <%= game.result %>
-                </span>
+                <% if (game.result !== 'vs') { %>
+                  <span class="result <%= game.win === 'win' ? 'text-success' : game.win === 'loss' ? 'text-danger' : '' %>">
+                    <%= game.result %>
+                  </span>
+                <% } %>
               </div>
             </div>
           <% }) %>
