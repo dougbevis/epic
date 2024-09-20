@@ -11869,12 +11869,14 @@ body.dark-theme {
 }
 
 .game-date .day {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
+  display: block;
 }
 
 .game-date .month {
   font-size: 14px;
+  display: block;
 }
 
 .game-result {
