@@ -30,7 +30,7 @@
          if (date && home && away && time) {
            const [dayOfWeek, month, day] = date.split(' '); // Assuming date format is "DayOfWeek Month Day"
            
-           let win = null;
+           let win = tp;
            if (result) {
              const [homeScore, awayScore] = result.split(':').map(Number);
              if (home === "EPIC SC Attack White 2014B") {
