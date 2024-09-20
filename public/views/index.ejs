@@ -41,7 +41,7 @@
       <% if (schedule.length > 0) { %>
         <div class="scrollable-container">
           <% schedule.forEach((game, index) => { %>
-            <div class="game-box <%= game.win ==  'win' ? 'win-class' : '' %><%= game.win == 'loss' ? 'loss-class' : '' %>" data-index="<%= index %>">
+            <div class="game-box <%= game.win === 'win' ? 'win-class' : '' %>" data-index="<%= index %>">
               <div class="game-date">
                 <span class="day"><%= game.day %></span>
                 <span class="month"><%= game.month %></span>
