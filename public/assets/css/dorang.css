@@ -11880,7 +11880,17 @@ body.dark-theme {
 }
 
 .game-result {
-  margin-top: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: left;
+}
+
+.game-result .home-team,
+.game-result .away-team {
+  display: block; /* Ensure both teams are displayed as block elements */
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .game-result .result {
