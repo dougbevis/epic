@@ -39,17 +39,17 @@
     <div class="col-md-10 col-lg-8 m-auto">
       <h6 class="title mb-4">Our Schedule</h6>
       <% if (schedule.length > 0) { %>
-        <ul>
-          <% schedule.forEach(game => { %>
-            <li>
+        <div class="scrollable-container">
+          <% schedule.forEach((game, index) => { %>
+            <div class="game-box" data-index="<%= index %>">
               <strong>Date:</strong> <%= game.date %> <br>
               <strong>Time:</strong> <%= game.time %> <br>
               <strong>Home Team:</strong> <%= game.home %> <br>
               <strong>Away Team:</strong> <%= game.away %> <br>
               <strong>Result:</strong> <%= game.result %>
-            </li>
+            </div>
           <% }) %>
-        </ul>
+        </div>
       <% } else { %>
         <p>No schedule available at the moment.</p>
       <% } %>

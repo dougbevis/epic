@@ -60,3 +60,21 @@ $(document).ready(function(){
         } 
     });
 }); 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const gameBoxes = document.querySelectorAll('.game-box');
+    const now = new Date();
+  
+    let nextGameIndex = -1;
+    gameBoxes.forEach((box, index) => {
+      const gameDate = new Date(box.querySelector('strong').nextSibling.textContent.trim());
+      if (gameDate > now && nextGameIndex === -1) {
+        nextGameIndex = index;
+      }
+    });
+  
+    if (nextGameIndex !== -1) {
+      gameBoxes[nextGameIndex].classList.add('highlight');
+      gameBoxes[nextGameIndex].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+  });
