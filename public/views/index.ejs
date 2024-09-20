@@ -41,7 +41,7 @@
       <% if (schedule.length > 0) { %>
         <div class="scrollable-container">
           <% schedule.forEach((game, index) => { %>
-            <div class="game-box data-index="<%= index %>">
+            <div class="game-box data-index="<%= index %>" id="<%= game.game_status === 'nextUp' ? 'nextUpGame' : '' %>">
               <div class="game-date">
                 <span class="day"><%= game.day %></span>
                 <span class="month"><%= game.month %></span>
@@ -154,5 +154,14 @@
 
   <!-- Dorang js -->
   <script src="assets/js/dorang.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const nextUpGame = document.getElementById('nextUpGame');
+      if (nextUpGame) {
+        nextUpGame.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  </script>
 </body>
 </html>

@@ -18,6 +18,10 @@
        const $iframe = cheerio.load(iframeHtml);
 
        const schedule = [];
+       let nextUpGameIndex = null;
+       let mostRecentGameIndex = null;
+       const now = new Date();
+
        $iframe('.GameRow').each((index, element) => {
          const date = $iframe(element).find('.date').text().trim();
          const time = $iframe(element).find('.time').text().trim();
@@ -44,10 +48,29 @@
              }
            }
            
-           console.log({ date, home, away, time, result, win });
-           schedule.push({ dayOfWeek, month, day, time, home, away, result, win });
+           const gameDate = new Date(`${month} ${day}, ${new Date().getFullYear()} ${time}`);
+           let game_status = null;
+
+           if (gameDate > now) {
+             if (!nextUpGameIndex || gameDate < new Date(`${schedule[nextUpGameIndex].month} ${schedule[nextUpGameIndex].day}, ${new Date().getFullYear()} ${schedule[nextUpGameIndex].time}`)) {
+               nextUpGameIndex = index;
+             }
+           } else {
+             if (!mostRecentGameIndex || gameDate > new Date(`${schedule[mostRecentGameIndex].month} ${schedule[mostRecentGameIndex].day}, ${new Date().getFullYear()} ${schedule[mostRecentGameIndex].time}`)) {
+               mostRecentGameIndex = index;
+             }
+           }
+
+           schedule.push({ dayOfWeek, month, day, time, home, away, result, win, game_status });
          }
        });
+
+       if (nextUpGameIndex !== null) {
+         schedule[nextUpGameIndex].game_status = 'nextUp';
+       }
+       if (mostRecentGameIndex !== null) {
+         schedule[mostRecentGameIndex].game_status = 'mostRecent';
+       }
 
        console.log('Schedule fetched:', schedule);
        return schedule;
