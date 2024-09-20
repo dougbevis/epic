@@ -11889,8 +11889,7 @@ body.dark-theme {
 .game-result .home-team,
 .game-result .away-team {
   display: block; /* Ensure both teams are displayed as block elements */
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 .game-result .result {

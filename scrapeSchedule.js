@@ -21,8 +21,8 @@
        $iframe('.GameRow').each((index, element) => {
          const date = $iframe(element).find('.date').text().trim();
          const time = $iframe(element).find('.time').text().trim();
-         const home = $iframe(element).find('.tm1').text().trim();
-         const away = $iframe(element).find('.tm2').text().trim();
+         const home = $iframe(element).find('.tm1').text().trim().split(' ').slice(0, 2).join(' ');
+         const away = $iframe(element).find('.tm2').text().trim().split(' ').slice(0, 2).join(' ');
          const result = $iframe(element).find('.mr').text().trim();
 
 
@@ -34,9 +34,9 @@
              win = "tp";
            } else if (result) {
              const [homeScore, awayScore] = result.split(':').map(Number);
-             if (home === "EPIC SC Attack White 2014B") {
+             if (home === "EPIC SC") {
                win = homeScore > awayScore ? 'win' : 'loss';
-             } else if (away === "EPIC SC Attack White 2014B") {
+             } else if (away === "EPIC SC") {
                win = awayScore > homeScore ? 'win' : 'loss';
              }
            }
