@@ -11838,6 +11838,8 @@ body.dark-theme {
   overflow-x: auto;
   padding: 10px;
   gap: 10px;
+  flex-direction: column;
+  height: 100%;
 }
 
 .game-box {
