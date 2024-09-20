@@ -43,13 +43,14 @@
           <% schedule.forEach((game, index) => { %>
             <div class="game-box" data-index="<%= index %>">
               <div class="game-date">
-                <span class="day">15</span>
-                <span class="month">Oct</span>
+                <span class="day"><%= game.dayOfWeek %></span>
+                <span class="month"><%= game.month %></span>
               </div>
               <div class="game-result">
-                <span class="home-team">EPIC SC Attack White 2014B</span>
-                <span class="result">2:1</span>
-                <span class="away-team">Opponent Team</span>
+                <span class="home-team"><%= game.home %></span>
+                <span class="result"><%= game.result %></span>
+                <span class="away-team"><%= game.away %></span>
+                <span class="win-status"><%= game.win %></span>
               </div>
             </div>
           <% }) %>

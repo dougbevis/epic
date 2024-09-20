@@ -28,7 +28,19 @@
          console.log({ date, home, away, time, result });
 
          if (date && home && away && time) {
-           schedule.push({ date, time, home, away, result });
+           const [dayOfWeek, month, day] = date.split(' '); // Assuming date format is "DayOfWeek Month Day"
+           
+           let win = null;
+           if (result) {
+             const [homeScore, awayScore] = result.split(':').map(Number);
+             if (home === "EPIC SC Attack White 2014B") {
+               win = homeScore > awayScore ? 'win' : 'loss';
+             } else if (away === "EPIC SC Attack White 2014B") {
+               win = awayScore > homeScore ? 'win' : 'loss';
+             }
+           }
+
+           schedule.push({ dayOfWeek, month, day, time, home, away, result, win });
          }
        });
 
