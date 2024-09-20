@@ -11895,11 +11895,11 @@ body.dark-theme {
 }
 
 .win-class {
-  border-color: #ff0000;
-  background-color: #ffe6e6;
+  border-color: #00ff00; /* Green border */
+  background-color: #e6ffe6; /* Light green background */
 }
 
 .loss-class {
-  border-color: #00ff00;
-  background-color: #e6ffe6;
+  border-color: #ff0000; /* Red border */
+  background-color: #ffe6e6; /* Light red background */
 }

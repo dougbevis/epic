@@ -25,13 +25,14 @@
          const away = $iframe(element).find('.tm2').text().trim();
          const result = $iframe(element).find('.mr').text().trim();
 
-         console.log({ date, home, away, time, result });
 
          if (date && home && away && time) {
            const [dayOfWeek, month, day] = date.split(' '); // Assuming date format is "DayOfWeek Month Day"
            
-           let win = tp;
-           if (result) {
+           let win = null;
+           if (result === "vs") {
+             win = "tp";
+           } else if (result) {
              const [homeScore, awayScore] = result.split(':').map(Number);
              if (home === "EPIC SC Attack White 2014B") {
                win = homeScore > awayScore ? 'win' : 'loss';
@@ -39,7 +40,8 @@
                win = awayScore > homeScore ? 'win' : 'loss';
              }
            }
-
+           
+           console.log({ date, home, away, time, result, win });
            schedule.push({ dayOfWeek, month, day, time, home, away, result, win });
          }
        });
