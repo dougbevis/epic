@@ -11927,5 +11927,6 @@ body.dark-theme {
 
 .coach-name {
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 18px;
+  color: #000;
 }
