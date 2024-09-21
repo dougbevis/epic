@@ -36,8 +36,9 @@
         <div class="scrollable-container">
           <% schedule.forEach((game, index) => { %>
             <div class="game-box" data-index="<%= index %>" id="<%= game.game_status === 'nextUp' ? 'nextUpGame' : '' %>">
-              <div class="game-date">
-                <span class="day"><%= game.day %></span>
+              <% if (game.game_status === 'nextUp') { %>Next Game!<%= } %>
+                <div class="game-date">
+                  <span class="day"><%= game.day %></span>
                 <span class="month"><%= game.month %></span>
               </div>
               <div class="game-result">
