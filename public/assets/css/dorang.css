@@ -11838,6 +11838,28 @@ body.dark-theme {
   overflow-x: auto;
   padding: 10px;
   gap: 10px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrollable-container::before,
+.scrollable-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  pointer-events: none;
+}
+
+.scrollable-container::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.scrollable-container::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
 }
 
 .game-box {
