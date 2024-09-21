@@ -24,16 +24,9 @@
     <div class="header-content">
       <h1 class="header-title">Epic Attack White</h1>
       <p class="header-subtitle">Passion. Dedication. Teamwork.</p>
-      <button class="btn btn-theme-color modal-toggle" id="instagramButton"><i class="ti-control-play text-danger"></i>Follow us on Instagram</button>
+      <a href="https://www.instagram.com/epicattack2014b/" class="btn btn-theme-color" target="_blank" id="instagramButton"><i class="ti-control-play text-danger"></i>Follow us on Instagram</a>
     </div>
   </header><!-- end of page header -->
-
-  <!-- modal -->
-  <div class="modalBox" id="instagramModal">
-    <div class="modalBox-body">
-      <iframe width="100%" height="450px" class="border-0" src=""></iframe>
-    </div>
-  </div><!-- end of modal -->
 
 <a id="schedule"></a>
   <div class="container page-container">
@@ -185,24 +178,6 @@
             });
           }
         });
-      });
-
-      // Instagram button click event
-      const instagramButton = document.getElementById('instagramButton');
-      const instagramModal = document.getElementById('instagramModal');
-      const iframe = instagramModal.querySelector('iframe');
-
-      instagramButton.addEventListener('click', function() {
-        iframe.src = "https://www.instagram.com/epicattack2014b/";
-        instagramModal.style.display = 'block';
-      });
-
-      // Close modal when clicking outside of it
-      window.addEventListener('click', function(event) {
-        if (event.target === instagramModal) {
-          instagramModal.style.display = 'none';
-          iframe.src = ""; // Clear the iframe src to stop the video
-        }
       });
     });
   </script>
