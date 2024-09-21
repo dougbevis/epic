@@ -11938,3 +11938,29 @@ body.dark-theme {
   margin-bottom: 20px;
   text-align: center;
 }
+
+.sponsor-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.sponsor-logos {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
+
+.sponsor-logo {
+  display: inline-block;
+  margin: 0 10px;
+  height: 100px; /* Adjust as needed */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
