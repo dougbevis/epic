@@ -154,28 +154,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const nextUpGame = document.getElementById('nextUpGame');
-      console.log('nextUpGame:', nextUpGame); // Debugging line
-
-      if (nextUpGame) {
-        const scrollableContainer = document.querySelector('.scrollable-container');
-        console.log('scrollableContainer:', scrollableContainer); // Debugging line
-
-        if (scrollableContainer) {
-          console.log('nextUpGame offsetTop:', nextUpGame.offsetTop);
-          console.log('scrollableContainer offsetTop:', scrollableContainer.offsetTop);
-
-          scrollableContainer.scrollTo({
-            top: nextUpGame.offsetTop - scrollableContainer.offsetTop,
-            behavior: 'smooth'
-          });
-        } else {
-          console.error('Scrollable container not found');
-        }
-      } else {
-        console.error('nextUpGame element not found');
-      }
-
       // Adjust scroll position for nav items
       const navItems = document.querySelectorAll('.nav-link');
       const offset = 70; // Adjust this value based on your navbar height
