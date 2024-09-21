@@ -11930,3 +11930,11 @@ body.dark-theme {
   margin-top: 18px;
   color: #000;
 }
+
+.team-photo-container {
+  background-color: #f8f9fa; /* Light background color */
+  border: 1px solid #dee2e6; /* Border color */
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
