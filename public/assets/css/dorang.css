@@ -11916,3 +11916,16 @@ body.dark-theme {
   border-color: #ff0000; /* Red border */
   background-color: #ffe6e6; /* Light red background */
 }
+
+.coach-container {
+  background-color: #f8f9fa; /* Light background color */
+  border: 1px solid #dee2e6; /* Border color */
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.coach-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
