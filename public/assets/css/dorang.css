@@ -11941,13 +11941,12 @@ body.dark-theme {
 
 .sponsor-scroll {
   overflow: hidden;
-  white-space: nowrap;
   position: relative;
 }
 
 .sponsor-logos {
-  display: inline-block;
-  animation: scroll 40s linear infinite;
+  display: flex;
+  animation: scroll 30s linear infinite;
 }
 
 .sponsor-logo {
@@ -11958,7 +11957,7 @@ body.dark-theme {
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
